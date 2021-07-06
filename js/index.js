@@ -1,8 +1,9 @@
 // Enter your city in header
 const headerCityButton = document.querySelector(".header__city-button");
 
-headerCityButton.textContent =
-  `Your city: ${localStorage.getItem("lomoda-location")}` || "Enter your city";
+headerCityButton.textContent = localStorage.getItem("lomoda-location")
+  ? `Your city: ${localStorage.getItem("lomoda-location")}`
+  : "Enter your city";
 
 headerCityButton.addEventListener("click", enterCity);
 
